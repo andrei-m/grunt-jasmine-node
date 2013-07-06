@@ -15,15 +15,8 @@ module.exports = function (grunt) {
         specFolders: ["./spec" ],
         projectRoot: "./app",
         // if 'deploy.project' is given, the build is running in TeamCity
-        teamcity: !!grunt.option('deploy.project'),
-        forceExit: true,
-        jUnit: {
-           report: false,
-           savePath : "./reports/",
-            useDotNotation: true,
-            consolidate: true
-         }
-    }
+        teamcity: !!grunt.option('deploy.project')
+     }
   });
 
   grunt.registerTask('default', [
